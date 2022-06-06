@@ -20,7 +20,6 @@ __interpreter__ = "Python 3.8.10"
 """
 
 #=== USES ===
-
 #--- Standard ---
 from io import BytesIO
 from typing import Final
@@ -120,8 +119,8 @@ def save_binance_price_series(
 #=== MAIN ===
 
 if  __name__ == "__main__":
-    prices = get_binance_hist_prices()
-    # prices = get_binance_hist_price_series(start_date = "2022-05-01", end_date = "2022-05-02")
+    # prices = get_binance_hist_prices()
+    prices = get_binance_hist_price_series(start_date = "2022-05-01", end_date = "2022-05-02")
     print(prices.info())
     print(prices.describe())
     save_binance_price_series(data = prices)
